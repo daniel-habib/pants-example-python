@@ -6,4 +6,4 @@ from helloworld.greet.greeting import Greeter
 
 def test_greeter() -> None:
     greeter = Greeter(translations={"hello": {"es": "hola"}})
-    assert greeter.greet("test") == "Hola, test!"
+    assert greeter.greet("test") == "Hola, test! (es)"
