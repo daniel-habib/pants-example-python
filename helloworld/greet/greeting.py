@@ -26,5 +26,5 @@ class Greeter:
 
     def greet(self, name: str) -> str:
         random_greeting = random.choice(list(self._translations.keys()))
-        greeting = self._translator.translate_to_random_language(random_greeting)
-        return f"{greeting}, {name}!".capitalize()
+        random_tuple = self._translator.translate_to_random_language(random_greeting)
+        return f"{random_tuple[1]}, {name}! ({random_tuple[0]})".capitalize()

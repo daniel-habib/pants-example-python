@@ -41,6 +41,6 @@ class LanguageTranslator:
             raise UnknownLanguage(lang)
         return translations[lang]
 
-    def translate_to_random_language(self, phrase: str) -> str:
+    def translate_to_random_language(self, phrase: str) -> tuple[str, str]:
         lang = random.choice(sorted(self.all_languages))
-        return self.translate(lang, phrase)
+        return lang, self.translate(lang, phrase)
